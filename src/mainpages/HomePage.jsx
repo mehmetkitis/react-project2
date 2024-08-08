@@ -29,7 +29,7 @@ const HomePage = () => {
       </label>
       <button onClick={() => {
         setTitleSave(title)
-      }}>Başılığı değiştir!</button>
+      }}>Başılığı değiştir</button>
       <hr />
       <p>{developerDays}</p>
       <p className='text-lg text-sky-600'>
