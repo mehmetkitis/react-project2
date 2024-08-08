@@ -1,0 +1,27 @@
+.productsContainer {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+
+.productsCard {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #333;
+}
+
+.productsCard img {
+    width: 100%;
+}
+
+.urunlersyf {
+    text-align: center;
+    background-color: white;
+    width:100%;
+}
