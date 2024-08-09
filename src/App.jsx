@@ -16,6 +16,7 @@ import WorkintechUseFormApp from './workintechUseForm/WorkintechUseFormApp'
 import Counter from './counter/Counter'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import CounterReducer from './counter/CounterReducer'
+import Users from './workintechLoginPage/Users'
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
 
         <Route path="/" exact>
           <HomePage />
+        </Route>
+        <Route path="/users" exact>
+          <Users />
         </Route>
         <Route path="/counter" >
           <Counter />

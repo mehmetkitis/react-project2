@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import { toast } from 'react-toastify'
@@ -9,36 +8,19 @@ const formDataInitial = {
     rememberMe: false,
 }
 
-const WorkintechLoginPage = ({ user, setUser }) => {
+const WorkintechLoginPage = () => {
     const [formData, setFormData] = useState(formDataInitial);
     const history = useHistory();
 
     const inputChangeHandler = (event) => {
         const { value, name, type, checked } = event.target;
-        setFormData({ ...formData, [name]: type === "checkbox" ? checked : value })
+        setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
     }
 
     const submitHandler = (event) => {
         event.preventDefault();
-        // axios
-        //     .get('https://6540a96145bedb25bfc247b4.mockapi.io/api/login')
-        //     .then((res) => {
-        //         const users = res.data;
-        //         for (let i = 0; i < users.length; i++) {
-        //             const user = users[i];
-        //             if (
-        //                 user.email == formData.email &&
-        //                 user.password == formData.password
-        //             ) {
-        //                 return;
-        //             }
-        //         }
-
-        //     });
         toast.success("Giriş Başarılı");
-        setUser({ name: formData.email, email: formData.email });
         history.push('/');
-        localStorage.setItem("email", formData.email)
         setFormData(formDataInitial);
     }
 
