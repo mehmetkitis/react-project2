@@ -3,7 +3,7 @@ import React from 'react'
 const AboutMe = () => {
   return (
     <div>
-      <p>Merhabalar Ben Mehmet Kitiş</p>
+      <p>Merhaba,ben Mehmet Kitiş</p>
     </div>
   )
 }
