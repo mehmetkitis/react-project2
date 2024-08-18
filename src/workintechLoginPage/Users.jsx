@@ -1,21 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { users } from './user';
 
+export let users2 = [];
 
-
-let users2 = [];
-
-
+users.map((i) => {
+    users2 = [...users2, { ...i, user: `${i.name[0].toLowerCase() + i.lastName.toLowerCase()}` }];
+})
 
 const Users = () => {
-    const [add, setAdd] = useState([]);
 
-    users.map((i, index) => {
-        users2 = [...users2, { ...i, user: `${i.name[0].toLowerCase() + i.lastName.toLowerCase()}` }];
-    })
 
-    console.log(users2)
-
+    console.log(users2);
 
     return (
         <div>

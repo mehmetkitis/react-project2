@@ -47,7 +47,7 @@ const CounterReducer = () => {
         dispatchCounter({ type: "artisMiktariAzalt" })
     }
     const taneFiyatAta = (e) => {
-        dispatchCounter({ type: "taneFiyatAta", payload: e.target.value < 1 ? 1 : e.target.value })
+        dispatchCounter({ type: "taneFiyatAta", payload: e.target.value < 0 ? 0 : e.target.value })
     }
     return (
         <div className='grid grid-cols-2 '>

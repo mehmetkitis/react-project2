@@ -15,7 +15,8 @@ const navLinksPaths = [
   { title: "Task", path: "/taskpage" },
   { title: "Counter", path: "/counter" },
   { title: "CounterReducer", path: "counterReducer" },
-  { title: "Users", path: "/users" }
+  { title: "Users", path: "/users" },
+  { title: "WorkintechCalculator", path: "/workintechCalculator" }
 ]
 
 const Nav = () => {

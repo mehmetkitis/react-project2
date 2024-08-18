@@ -17,6 +17,7 @@ import Counter from './counter/Counter'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import CounterReducer from './counter/CounterReducer'
 import Users from './workintechLoginPage/Users'
+import WorkintechCalculatorApp from './workintechCalculator/WorkintechCalculatorApp'
 
 
 function App() {
@@ -28,8 +29,11 @@ function App() {
         <Route path="/" exact>
           <HomePage />
         </Route>
-        <Route path="/users" exact>
+        <Route path="/users" >
           <Users />
+        </Route>
+        <Route path="/workintechCalculator" >
+          <WorkintechCalculatorApp />
         </Route>
         <Route path="/counter" >
           <Counter />

@@ -1,0 +1,4 @@
+.calc-btn {
+    display: flex;
+    flex-direction: row;
+}
