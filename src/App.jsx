@@ -18,6 +18,10 @@ import { useLocalStorage } from './hooks/useLocalStorage'
 import CounterReducer from './counter/CounterReducer'
 import Users from './workintechLoginPage/Users'
 import WorkintechCalculatorApp from './workintechCalculator/WorkintechCalculatorApp'
+import WIMDBFilmApp from './workintechIMDBFilm/wIMDBFilmC/WIMDBFilmApp'
+import WFavFilmsApp from './workintechFavFilms/WFavFilmsApp'
+
+
 
 
 function App() {
@@ -25,12 +29,21 @@ function App() {
     <>
       <Nav />
       <Switch>
-
         <Route path="/" exact>
           <HomePage />
         </Route>
         <Route path="/users" >
           <Users />
+        </Route>
+        <Route path="/imdbFilm" >
+          <BrowserRouter>
+            <WIMDBFilmApp />
+          </BrowserRouter>
+        </Route>
+        <Route path="/favFilm" >
+          <BrowserRouter>
+            <WFavFilmsApp />
+          </BrowserRouter>
         </Route>
         <Route path="/workintechCalculator" >
           <WorkintechCalculatorApp />

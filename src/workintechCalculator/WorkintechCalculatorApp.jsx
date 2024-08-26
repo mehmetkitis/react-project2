@@ -1,13 +1,16 @@
-import React, { useReducer } from 'react';
-
 import WorkintechCalculatorTotalDisplay from './WorkintechCalculatorTotalDisplay.jsx';
 import WorkintechCalculatorCalcButton from './WorkintechCalculatorCalcButton.jsx';
-import reducer, { initialState } from './WorkintechCalculatorReducers.jsx';
-import { CE, changeOperation, EQUALS, MEMORY_ADD, MEMORY_CLEAR, MEMORY_RECALL, typeOnScreen } from './WorkintechCalculatorActions.jsx';
 import "./workintechCalculator.css"
+import { useDispatch, useSelector } from 'react-redux';
+import { store } from '../store/store.js';
+import { CE, changeOperation, EQUALS, MEMORY_ADD, MEMORY_CLEAR, MEMORY_RECALL, typeOnScreen } from '../store/actions/wCalculatorActions.js';
 
 function WorkintechCalculatorApp() {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const calcDisplayValue = useSelector((store) => store.wCalculatorReducer.displayValue);
+    const calcOperation = useSelector((store) => store.wCalculatorReducer.operation);
+    const calcMemory = useSelector((store) => store.wCalculatorReducer.memory);
+    const calcAccumulator = useSelector((store) => store.wCalculatorReducer.accumulator);
+    const dispatch = useDispatch();
     return (
         <div >
             <nav >
@@ -17,14 +20,14 @@ function WorkintechCalculatorApp() {
             <div >
                 <div>
                     <form name="Cal">
-                        <WorkintechCalculatorTotalDisplay value={state.accumulator} />
-                        <WorkintechCalculatorTotalDisplay value={state.displayValue} />
+                        <WorkintechCalculatorTotalDisplay value={calcAccumulator} />
+                        <WorkintechCalculatorTotalDisplay value={calcDisplayValue} />
                         <div >
                             <span id="operation">
-                                <b>Operation:</b> {state.operation}
+                                <b>Operation:</b> {calcOperation}
                             </span>
                             <span id="memory">
-                                <b>Memory:</b> {state.memory}
+                                <b>Memory:</b> {calcMemory}
                             </span>
                         </div>
                         <div className='calc-btn' >

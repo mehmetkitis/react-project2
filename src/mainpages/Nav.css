@@ -1,12 +1,13 @@
 .navLinks {
     display: flex;
     justify-content: space-between;
+    width: 100vw;
 }
 
 .navLinks1 {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
     margin: 1rem 0.5rem;
 }
 
@@ -16,13 +17,18 @@
     background-color: rgb(149, 6, 6);
     color: black;
     padding: 0.25rem;
+    width: 5vw;
+    font-size: 0.8rem;
 }
 
 .navLinks3 {
     text-decoration: none;
+    width: 5vw;
     border: 1px solid rgb(57, 4, 4);
     color: red;
     padding: 0.25rem;
     background-color: rgb(23, 13, 13);
     transform: scale(1.1);
+    font-size: 0.8rem;
+
 }

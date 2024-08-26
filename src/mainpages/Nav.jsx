@@ -14,9 +14,11 @@ const navLinksPaths = [
   { title: "Calculator", path: "/calculator" },
   { title: "Task", path: "/taskpage" },
   { title: "Counter", path: "/counter" },
-  { title: "CounterReducer", path: "counterReducer" },
+  { title: "Counter Reducer", path: "counterReducer" },
   { title: "Users", path: "/users" },
-  { title: "WorkintechCalculator", path: "/workintechCalculator" }
+  { title: "Workintech Calculator", path: "/workintechCalculator" },
+  { title: "IMDB Film", path: "/imdbFilm" },
+  { title: "Favorite Film", path: "/favFilm" }
 ]
 
 const Nav = () => {
@@ -27,7 +29,6 @@ const Nav = () => {
     <div className='navLinks'>
       <nav className='navLinks1' >
         {navLinksPaths.map((n, index) => {
-
           return (
             <NavLink className={category === n.title ? "navLinks3" : "navLinks2"} onClick={() => { setCategory(n.title) }} key={index} to={n.path}>{n.title}</NavLink>
           )

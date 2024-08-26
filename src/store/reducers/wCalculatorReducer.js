@@ -1,4 +1,5 @@
-import { ADD_ONE, APPLY_NUMBER, CE, CHANGE_OPERATION, changeOperation, EQUALS, MEMORY_ADD, MEMORY_CLEAR, MEMORY_RECALL, TYPE_ON_SCREEN, typeOnScreen } from './WorkintechCalculatorActions.jsx';
+import { CE, CHANGE_OPERATION, EQUALS, MEMORY_ADD, MEMORY_CLEAR, MEMORY_RECALL, TYPE_ON_SCREEN } from "../actions/wCalculatorActions.js";
+
 
 
 export const initialState = {
@@ -23,7 +24,7 @@ const calculateResult = (num1, num2, operation) => {
     }
 };
 
-const reducer = (state, action) => {
+const wCalculatorReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case TYPE_ON_SCREEN:
@@ -82,4 +83,4 @@ const reducer = (state, action) => {
     }
 };
 
-export default reducer;
+export default wCalculatorReducer;

@@ -3,7 +3,7 @@ export const GlobalActions = {
     setUserName: "SET_USER_NAME",
 }
 
-const globalInitial = {
+export const globalInitial = {
     title: "Merhaba redux",
     userName: "",
 }
