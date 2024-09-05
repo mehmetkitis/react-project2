@@ -18,7 +18,10 @@ const navLinksPaths = [
   { title: "Users", path: "/users" },
   { title: "Workintech Calculator", path: "/workintechCalculator" },
   { title: "IMDB Film", path: "/imdbFilm" },
-  { title: "Favorite Film", path: "/favFilm" }
+  { title: "Favorite Film", path: "/favFilm" },
+  { title: "Fihrist", path: "/fihrist" },
+  { title: "Pagination Product", path: "/paginationProduct" },
+  { title: "Book Store", path: "/bookStore" }
 ]
 
 const Nav = () => {
@@ -26,7 +29,7 @@ const Nav = () => {
   const [category, setCategory] = useState("");
 
   return (
-    <div className='navLinks'>
+    <div className='navLinks overflow-x-scroll'>
       <nav className='navLinks1' >
         {navLinksPaths.map((n, index) => {
           return (

@@ -28,15 +28,12 @@ const WIMDBFilmApp = () => {
                         <Route exact path="/movies/add">
                             <W1AddMovieForm />
                         </Route>
-
                         <Route path="/movies/:id">
                             <W1Movie />
                         </Route>
-
                         <Route path="/movies">
                             <W1MovieList />
                         </Route>
-
                         <Route path="/">
                             <Redirect to="/movies" />
                         </Route>

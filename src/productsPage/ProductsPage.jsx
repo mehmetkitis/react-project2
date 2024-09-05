@@ -17,10 +17,10 @@ border-radius:7px;
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
   const [kategori, setKategori] = useState("none");
-  const [drk,setDrk]=useState(false);
-  const [drkText,setDrkText]=useState("Dark Mode");
+  const [drk, setDrk] = useState(false);
+  const [drkText, setDrkText] = useState("Dark Mode");
 
-  
+
 
   useEffect(() => {
     axios
@@ -31,14 +31,14 @@ const ProductsPage = () => {
         }));
       })
       .catch((err) => console.warn(err));
-  },[kategori])
-  
+  }, [kategori])
+
   const onClick2 = () => {
     setDrk(!drk);
     drk ? setDrkText("Dark Mode") : setDrkText("Light Mode");
   }
-  
-  
+
+
 
   return (
     <div >
@@ -46,9 +46,9 @@ const ProductsPage = () => {
       <BtnDark onClick={onClick2} >{drkText}</BtnDark>
 
       <h1 className='urunlersyf'>Ürünler Sayfası</h1>
-      <SideBar  kategori={kategori} setKategori={setKategori} />
+      <SideBar kategori={kategori} setKategori={setKategori} />
 
-      <div style={drk === false ? {backgroundColor:"white",color:"black"}:{backgroundColor:"black",color:"white"}} className='productsContainer'>
+      <div style={drk === false ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" }} className='productsContainer'>
         {products.map((product) => {
           return (
             <ProductCard product={product} key={product.id} />

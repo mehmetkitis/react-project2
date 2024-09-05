@@ -20,11 +20,12 @@ import Users from './workintechLoginPage/Users'
 import WorkintechCalculatorApp from './workintechCalculator/WorkintechCalculatorApp'
 import WIMDBFilmApp from './workintechIMDBFilm/wIMDBFilmC/WIMDBFilmApp'
 import WFavFilmsApp from './workintechFavFilms/WFavFilmsApp'
-
-
-
+import W4FihristApp from './workintechFihrist/W4FihristApp'
+import PaginationProductApp from './paginationProduct/PaginationProductApp'
+import WBookStoreApp from './workintechBookStore/WBookStoreApp'
 
 function App() {
+
   return (
     <>
       <Nav />
@@ -32,8 +33,23 @@ function App() {
         <Route path="/" exact>
           <HomePage />
         </Route>
+        <Route path="/bookStore" >
+          <BrowserRouter>
+            <WBookStoreApp />
+          </BrowserRouter>
+        </Route>
         <Route path="/users" >
           <Users />
+        </Route>
+        <Route path="/paginationProduct" >
+          <BrowserRouter>
+            <PaginationProductApp />
+          </BrowserRouter>
+        </Route>
+        <Route path="/fihrist" >
+          <BrowserRouter>
+            <W4FihristApp />
+          </BrowserRouter>
         </Route>
         <Route path="/imdbFilm" >
           <BrowserRouter>
