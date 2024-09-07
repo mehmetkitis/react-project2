@@ -59,7 +59,7 @@ const HomePage = () => {
       <hr />
       <p>{userName}</p>
       <label>
-        <input className='border-2 border-black border-solid' type="text" onChange={(e) => { setUserName(e.target.value) }} />
+        <input className='border-2 border-black border-solid' placeholder='Kullanıcı adı?' type="text" onChange={(e) => { setUserName(e.target.value) }} />
       </label>
       <hr />
       <div>

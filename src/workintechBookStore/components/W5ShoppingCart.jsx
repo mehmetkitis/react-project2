@@ -21,7 +21,6 @@ const W5ShoppingCart = () => {
 
             <ScCartCheckout>
                 <p>Total: ${getCartTotal()}</p>
-                <button>Checkout</button>
             </ScCartCheckout>
         </div>
     );

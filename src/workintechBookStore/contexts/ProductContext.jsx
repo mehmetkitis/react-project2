@@ -1,15 +1,11 @@
-import { createContext, useContext } from 'react';
-import W5UseLocalStorage from '../hooks/W5UseLocalStorage';
+import { createContext, useState } from 'react';
 import { data } from '../data';
-import { CartContext } from '../contexts/CartContext';
-
 
 export const ProductContextProvider = ({ children }) => {
-    const [products, setProducts] = W5UseLocalStorage('products', data);
-    const { addItem } = useContext(CartContext);
+    const [products, setProducts] = useState([...data]);
 
     return (
-        <ProductContext.Provider value={{ products, addItem }}>
+        <ProductContext.Provider value={{ products }}>
             {children}
         </ProductContext.Provider>
     );
