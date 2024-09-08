@@ -21,7 +21,8 @@ const navLinksPaths = [
   { title: "Favorite Film", path: "/favFilm" },
   { title: "Fihrist", path: "/fihrist" },
   { title: "Pagination Product", path: "/paginationProduct" },
-  { title: "Book Store", path: "/bookStore" }
+  { title: "Book Store", path: "/bookStore" },
+  { title: "Friends", path: "/friends" }
 ]
 
 const Nav = () => {
