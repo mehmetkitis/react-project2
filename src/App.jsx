@@ -25,6 +25,7 @@ import PaginationProductApp from './paginationProduct/PaginationProductApp'
 import WBookStoreApp from './workintechBookStore/WBookStoreApp'
 import WorkintechFriendsApp from './workintechFriends/WorkintechFriendsApp'
 import AuthContextProvider from './workintechFriends/contexts/AuthContext'
+import WorkintechMovieDatabaseApp from './workintechMovieDatabase/WorkintechMovieDatabaseApp'
 
 function App() {
 
@@ -34,6 +35,11 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <HomePage />
+        </Route>
+        <Route path="/movieDatabase" >
+          <BrowserRouter>
+            <WorkintechMovieDatabaseApp />
+          </BrowserRouter>
         </Route>
         <Route path="/friends">
           <AuthContextProvider>

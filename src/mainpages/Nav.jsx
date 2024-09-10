@@ -22,7 +22,8 @@ const navLinksPaths = [
   { title: "Fihrist", path: "/fihrist" },
   { title: "Pagination Product", path: "/paginationProduct" },
   { title: "Book Store", path: "/bookStore" },
-  { title: "Friends", path: "/friends" }
+  { title: "Friends", path: "/friends" },
+  { title: "Movie Database", path: "/movieDatabase" }
 ]
 
 const Nav = () => {
