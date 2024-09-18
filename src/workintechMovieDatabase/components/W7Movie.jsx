@@ -63,12 +63,7 @@ const W7Movie = (props) => {
                 >
                     Sil
                 </button>
-                <Link
-                    to={`/movies/edit/${movie.id}`}
-                    className="myButton bg-blue-600 hover:bg-blue-500 dark:bg-blue-200 dark:hover:bg-blue-400 dark:text-slate-800"
-                >
-                    Edit
-                </Link>
+
             </div>
         </div>
     );

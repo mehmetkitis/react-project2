@@ -63,6 +63,7 @@ const HomePage = () => {
       </label>
       <hr />
       <div>
+        {isPending && (<p>...Loading</p>)}
         {data?.author !== "M. Kemal Atatürk" && (
           <p>{data?.word}</p>
         )}

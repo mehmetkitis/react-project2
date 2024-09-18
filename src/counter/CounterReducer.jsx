@@ -52,27 +52,26 @@ const CounterReducer = () => {
     return (
         <div className='grid grid-cols-2 '>
             <div>
-                <button className='w-[33%] border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800' onClick={arti1}>Arttır</button>
-                <button className='w-[33%] border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800' onClick={eksi1}>Azalt</button>
-                <button className='w-[34%] border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800' onClick={yuz}>100 adet</button>
+                <button className='w-[33%] border-2 border-blue-950 border-solid ' onClick={arti1}>Arttır</button>
+                <button className='w-[33%] border-2 border-blue-950 border-solid ' onClick={eksi1}>Azalt</button>
+                <button className='w-[34%] border-2 border-blue-950 border-solid ' onClick={yuz}>100 adet</button>
             </div>
             <div>
-                <button className='w-[50%] border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800' onClick={artisMiktariArttir}>{counter.artisMiktari} Artış miktarı arttır</button>
-                <button className='w-[50%] border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800' onClick={artisMiktariAzalt}>{counter.artisMiktari} Artış miktarı azalt</button>
+                <button className='w-[50%] border-2 border-blue-950 border-solid ' onClick={artisMiktariArttir}>{counter.artisMiktari} Artış miktarı arttır</button>
+                <button className='w-[50%] border-2 border-blue-950 border-solid ' onClick={artisMiktariAzalt}>{counter.artisMiktari} Artış miktarı azalt</button>
             </div>
             <div className='grid grid-cols-3 w-screen'>
-                <div className='w-[30vw] border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800'>Adet {counter.adet}</div>
-                <div className='w-[25vw] flex justify-between border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800'>
+                <div className='w-[30vw] border-2 border-blue-950 border-solid '>Adet {counter.adet}</div>
+                <div className='w-[25vw] flex justify-between border-2 border-blue-950 border-solid '>
                     <h4 className='text-center my-1'>Tane Fiyat</h4>
                     <label >
                         <input
-                            className='w-full border-2 border-blue-950 border-solid bg-cyan-500 text-right'
+                            className='w-full border-2 border-blue-950 border-solid  text-right'
                             type="number"
                             value={counter.adetFiyat}
-                            onChange={taneFiyatAta} />
-                    </label>
+                            onChange={taneFiyatAta} />                    </label>
                 </div>
-                <div className='w-[25vw] border-2 border-blue-950 border-solid bg-cyan-500 text-violet-800'>Fiyat {counter.fiyat}</div>
+                <div className='w-[25vw] border-2 border-blue-950 border-solid '>Fiyat {counter.fiyat}</div>
             </div>
         </div>
     )

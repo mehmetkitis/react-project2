@@ -8,11 +8,10 @@ import PaginationProductForm from './PaginationProductForm';
 import { fetchProductsPagination } from './fetchProduct/product';
 
 const PaginationProductApp = () => {
-    const [list, setList] = useState([]);
     const [id, setId] = useState();
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(0);
     const [pages, setPages] = useState([0])
-    const limit = 2;
+    const limit = 20;
 
     const { isPending: productsLoading,
         error,
@@ -26,15 +25,9 @@ const PaginationProductApp = () => {
         setPages(Array.from(Array(parseInt(total / limit)).keys()))
     }, [total])
 
-    useEffect(() => {
-        setList(products)
-    }, [])
-
     const identifyHandler = (id) => {
         setId(id);
     }
-
-
 
     return (
         <div>
@@ -45,7 +38,7 @@ const PaginationProductApp = () => {
                 <Switch>
 
                     <Route path="/paginationRedirect">
-                        <PaginationProduct list={list} identifyHandler={identifyHandler} page={page} setPage={setPage} pages={pages} products={products} />
+                        <PaginationProduct productsLoading={productsLoading} identifyHandler={identifyHandler} page={page} setPage={setPage} pages={pages} products={products} />
                     </Route>
                     <Route path={`/ürün-detayları/${id}`} >
                         <PaginationProductsDetail id={id} />

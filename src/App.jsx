@@ -7,7 +7,6 @@ import Nav from './mainpages/Nav'
 import ProductsPage from './productsPage/ProductsPage'
 import ProductDetail from './productsPage/ProductDetail'
 import WorkintechFilmApp from './workintechFilmSayfası/WorkintechFilmApp'
-import WorkintechLoginPage from './workintechLoginPage/WorkintechLoginPage'
 import WorkintechRegisterPageApp from './workintechRegisterPage/WorkintechRegisterPageApp'
 import WorkintechContactPage from './workintechContactPage/WorkintechContactPage'
 import WorkintechLogin from './workintechLogin/WorkintechLogin'
@@ -16,7 +15,6 @@ import WorkintechUseFormApp from './workintechUseForm/WorkintechUseFormApp'
 import Counter from './counter/Counter'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import CounterReducer from './counter/CounterReducer'
-import Users from './workintechLoginPage/Users'
 import WorkintechCalculatorApp from './workintechCalculator/WorkintechCalculatorApp'
 import WIMDBFilmApp from './workintechIMDBFilm/wIMDBFilmC/WIMDBFilmApp'
 import WFavFilmsApp from './workintechFavFilms/WFavFilmsApp'
@@ -53,9 +51,6 @@ function App() {
             <WBookStoreApp />
           </BrowserRouter>
         </Route>
-        <Route path="/users" >
-          <Users />
-        </Route>
         <Route path="/paginationProduct" >
           <BrowserRouter>
             <PaginationProductApp />
@@ -90,9 +85,6 @@ function App() {
         </Route>
         <Route path="/hakkimda">
           <AboutMe />
-        </Route>
-        <Route path="/loginpage">
-          <WorkintechLoginPage />
         </Route>
         <Route path="/login">
           <WorkintechLogin />

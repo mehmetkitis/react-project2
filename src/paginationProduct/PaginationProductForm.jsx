@@ -23,11 +23,11 @@ const PaginationProductForm = ({ id }) => {
     const mutation = useMutation({
         mutationFn: (formData) =>
             axios
-                .put("https://620d69fb20ac3a4eedc05e3a.mockapi.io/api/products/" + id, formData)
+                .put("https://workintech-fe-ecommerce.onrender.com/products/" + id, formData)
                 .then((res) => res.data),
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ["products"] });
-            history.push("/paginationProduct");
+            history.push("/paginationRedirect");
         }
     })
 
@@ -62,6 +62,7 @@ const PaginationProductForm = ({ id }) => {
                     <button className='border-2 border-black border-solid' type='submit'>Güncelle</button>
                 </div>
             </form>
+            <button onClick={() => { history.push("/paginationRedirect") }}>Geri</button>
         </div>
     )
 }
